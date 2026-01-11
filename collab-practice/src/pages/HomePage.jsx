@@ -1,9 +1,7 @@
 import React from "react";
 
 
-// Homepage component
-// Navbar and Footer are expected to be injected via props
-// Image and logo URLs are passed as props (dummy paths by default)
+
 export default function HomePage({ Navbar, Footer, heroProps, partnerProps }) {
   return (
     <div className="app-container">
@@ -19,11 +17,9 @@ export default function HomePage({ Navbar, Footer, heroProps, partnerProps }) {
   );
 }
 
-/* ---------------- Hero Section ---------------- */
 function HeroSection({ imageSrc = "/assets/hero-image.png" }) {
   return (
     <section className="hero-section">
-      {/* Image first for mobile */}
       <div className="hero-image">
         <img src={imageSrc} alt="Hero illustration" />
       </div>
@@ -44,7 +40,6 @@ function HeroSection({ imageSrc = "/assets/hero-image.png" }) {
   );
 }
 
-/* ---------------- Partners / Logos Section ---------------- */
 function PartnersSection({
   logos = [
     { src: "/assets/logo-databiz.svg", alt: "databiz" },
